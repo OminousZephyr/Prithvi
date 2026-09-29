@@ -1,0 +1,61 @@
+{
+  "expo": {
+    "name": "PRITHVI",
+    "slug": "Prithvi",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/branding/prithvi-icon.png",
+    "scheme": "prithvi",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "icon": "./assets/branding/prithvi-icon.png"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#F6F3EA",
+        "foregroundImage": "./assets/branding/prithvi-android-foreground.png",
+        "monochromeImage": "./assets/branding/prithvi-android-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "package": "com.anonymous.Prithvi"
+    },
+    "web": {
+      "output": "static",
+      "favicon": "./assets/branding/prithvi-icon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#F6F3EA",
+          "image": "./assets/branding/prithvi-splash.png",
+          "imageWidth": 76
+        }
+      ],
+      "expo-sqlite",
+      [
+        "expo-image-picker",
+        {
+          "cameraPermission": "PRITHVI uses the camera when you choose to take a crop photo.",
+          "photosPermission": "PRITHVI uses a selected photo for crop screening on this device.",
+          "microphonePermission": false
+        }
+      ],
+      "react-native-fast-tflite",
+      "expo-asset",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "usesCleartextTraffic": true
+          }
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    }
+  }
+}

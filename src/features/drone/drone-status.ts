@@ -1,0 +1,6 @@
+import type { DroneTelemetry, GPSFixQuality, TelemetryStatus } from '@/domain/models';
+export const DRONE_TELEMETRY_FRESH_MS = 30_000;
+export function isTelemetryFresh(item: DroneTelemetry | undefined, at = Date.now(), maxAgeMs = DRONE_TELEMETRY_FRESH_MS) { if (!item) return false; const received = Date.parse(item.receivedAt); return Number.isFinite(received) && at >= received && at - received <= maxAgeMs; }
+export function validGpsFix(value: GPSFixQuality) { return value === '2d' || value === '3d' || value === 'dgps' || value === 'rtk_float' || value === 'rtk_fixed'; }
+export function telemetryScreenState(status: TelemetryStatus, item?: DroneTelemetry, at = Date.now()): TelemetryStatus { if (status === 'unconfigured' || status === 'connecting' || status === 'error') return status; if (!item || !isTelemetryFresh(item, at)) return item ? 'stale' : 'disconnected'; return item.connectionState === 'connected' ? 'connected' : 'disconnected'; }
+export function gpsFixLabel(value?: GPSFixQuality | null) { return value === 'no_fix' ? 'No GPS fix' : value === '2d' ? '2D fix' : value === '3d' ? '3D fix' : value === 'dgps' ? 'DGPS fix' : value === 'rtk_float' ? 'RTK float' : value === 'rtk_fixed' ? 'RTK fixed' : 'GPS unavailable'; }

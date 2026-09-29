@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">PRITHVI earth and crops mark</title>
+  <defs><clipPath id="globe"><circle cx="32" cy="32" r="25"/></clipPath></defs>
+  <circle cx="32" cy="32" r="27" fill="#245D43"/>
+  <circle cx="32" cy="32" r="23" fill="#DDE9D7"/>
+  <g clip-path="url(#globe)" fill="#83A982">
+    <path d="M13 22c5-6 9-6 12-3l-2 5 4 3-3 5-5-1-2 5-6-2-3-6zM40 15l8 2 3 5-5 3-1 6-6 2-1 7-5 4-3-7 3-5-2-7 5-2z"/>
+    <path d="M18 43c4-2 7-1 10 1l3 9H16zM38 43l7-3 8 5 2 9H34z"/>
+  </g>
+  <path d="M32 53V38m0 7c-7 0-11-4-11-10 7 0 11 4 11 10Zm0-3c0-7 4-11 11-11 0 7-4 11-11 11Z" fill="none" stroke="#245D43" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M7 32h50" stroke="#fff" stroke-opacity=".55" stroke-width="1"/>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 96" role="img" aria-labelledby="title">
+  <title id="title">PRITHVI — field knowledge, grounded</title>
+  <rect width="360" height="96" rx="22" fill="#173A2B"/>
+  <g transform="translate(18 15)">
+    <rect width="66" height="66" rx="22" fill="#E6EEE1"/>
+    <path d="M46 15C29 16 17 26 17 39c0 8 5 14 13 14 14 0 20-15 16-38Z" fill="#245D43"/>
+    <path d="M23 51c8-11 14-19 23-28" fill="none" stroke="#A6C4A6" stroke-width="3" stroke-linecap="round"/>
+    <path d="M14 55h39M18 60h31" fill="none" stroke="#A6C4A6" stroke-width="2" stroke-linecap="round" opacity=".86"/>
+    <circle cx="50" cy="17" r="3.2" fill="#D9A441"/>
+  </g>
+  <text x="102" y="57" fill="#F6F3EA" font-family="Manrope,Arial,sans-serif" font-size="31" font-weight="700" letter-spacing="2.5">PRITHVI</text>
+  <text x="104" y="76" fill="#C5D3C7" font-family="Manrope,Arial,sans-serif" font-size="10" font-weight="500" letter-spacing="1.1">FIELD KNOWLEDGE, GROUNDED</text>
+</svg>

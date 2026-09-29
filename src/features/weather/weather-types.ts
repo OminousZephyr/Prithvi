@@ -1,0 +1,5 @@
+export type WeatherCondition = 'clear' | 'mostly_clear' | 'partly_cloudy' | 'overcast' | 'fog' | 'drizzle' | 'rain' | 'snow' | 'showers' | 'thunderstorm' | 'unknown';
+export interface WeatherDay { date: string; minC: number | null; maxC: number | null; precipitationProbability: number | null; precipitationMm: number | null; condition: WeatherCondition; sunrise?: string; sunset?: string }
+export interface FieldWeather { fieldId: string; latitude: number; longitude: number; fetchedAt: string; timezone: string; current: { temperatureC: number | null; apparentC: number | null; humidityPct: number | null; precipitationMm: number | null; condition: WeatherCondition; windKmh: number | null; windDirectionDegrees: number | null }; days: WeatherDay[] }
+export type WeatherView = { status: 'available' | 'cached' | 'unavailable'; data?: FieldWeather; reason?: 'no_field_location' | 'network' | 'invalid_response' };
+export interface WeatherProvider { fetchForCoordinates(latitude: number, longitude: number, fieldId: string): Promise<FieldWeather> }

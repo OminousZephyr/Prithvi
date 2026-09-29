@@ -1,0 +1,2 @@
+import { CapabilityScreen } from '@/features/shared/capability-screen';
+export default function AnalyticsRoute() { return <CapabilityScreen title="Analytics" eyebrow="Learn over time" subtitle="Historical patterns from observations recorded on your farm." emptyTitle="Not enough history yet" description="Trends will appear when real sensor readings and field observations have been recorded. No yield prediction is available." label="NO HISTORY" />; }

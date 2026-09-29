@@ -1,0 +1,4 @@
+import type { FieldBoundary, GeoPoint, MapObservation, ScoutingTask, ScoutingZone } from '@/domain/models';
+export type { FieldBoundary, MapObservation, ScoutingTask, ScoutingZone };
+export interface ScoutingMapData { boundary?: FieldBoundary; draftPoints?: GeoPoint[]; drawingBoundary?: boolean; placingSensorId?: string; seedCenter?: GeoPoint; observations: MapObservation[]; zones?: ScoutingZone[]; sensorLocations?: { sensorId: string; latitude: number; longitude: number; zonePosition?: string }[]; dronePosition?: { latitude: number; longitude: number; heading?: number; altitudeM?: number; timestamp: string }; droneTelemetryState?: 'connected' | 'no_gps_fix' | 'stale' | 'disconnected' | 'unavailable'; track: { latitude: number; longitude: number; timestamp: string }[] }
+export interface ScoutingMapProvider { readonly id: 'openstreetmap'; readonly requiresApiKey: false; readonly onlineTiles: true; }

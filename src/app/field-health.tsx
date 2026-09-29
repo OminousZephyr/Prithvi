@@ -1,0 +1,2 @@
+import { CapabilityScreen } from '@/features/shared/capability-screen';
+export default function FieldHealthRoute() { return <CapabilityScreen title="Field health" eyebrow="Observe · verify" subtitle="See evidence and uncertainty together." emptyTitle="No crop observations" description="Possible stress, disease, or pest observations require field verification. No AI model is currently connected." label="NOT ASSESSED" />; }
